@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>desafio-rdi.webapi</name>
+    </assembly>
+    <members>
+        <member name="M:desafio_rdi.webapi.Controllers.CustomersController.SaveCard(desafio_rdi.webapi.Dto.CardDto,System.Int32)">
+            <summary>
+            operation responsible for storing the card 
+            </summary>
+            <param name="customerCardRequest">The card's data that will be stored</param>
+            <param name="customerId">The custumerId of your client</param>
+            <returns></returns>
+        </member>
+        <member name="M:desafio_rdi.webapi.Controllers.CustomersController.ValidateCard(desafio_rdi.webapi.Dto.ValidateCardRequestDto,System.Int32,System.Guid)">
+            <summary>
+            operation responsible for validating the card
+            </summary>
+            <param name="validateCardRequest">The data of the storaged card</param>
+            <param name="customerId">The custumerId of your client</param>
+            <param name="cardId">The cardId of your card</param>
+            <returns></returns>
+        </member>
+        <member name="P:desafio_rdi.webapi.Dto.CardDto.CardNumber">
+            <summary>
+            The CardNumber must to be long with 16 positions
+            </summary>
+        </member>
+        <member name="P:desafio_rdi.webapi.Dto.CardDto.CVV">
+            <summary>
+            The CVV number should up to be 4 positions
+            </summary>
+        </member>
+        <member name="P:desafio_rdi.webapi.Dto.CardResponseDto.CreationDate">
+            <summary>
+            The UTC date of stored card
+            </summary>
+        </member>
+        <member name="P:desafio_rdi.webapi.Dto.CardResponseDto.Token">
+            <summary>
+            The token generated during the process
+            </summary>
+        </member>
+        <member name="P:desafio_rdi.webapi.Dto.CardResponseDto.CardId">
+            <summary>
+            The cardId generated during the process
+            </summary>
+        </member>
+        <member name="P:desafio_rdi.webapi.Dto.ValidateCardRequestDto.Token">
+            <summary>
+            the token of your stored card
+            </summary>
+        </member>
+        <member name="P:desafio_rdi.webapi.Dto.ValidateCardRequestDto.CVV">
+            <summary>
+            The cvv number of your card
+            </summary>
+        </member>
+    </members>
+</doc>
