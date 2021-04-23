@@ -1,4 +1,4 @@
-version: '3'
+version: '3.4'
 
 services: 
     app:
@@ -8,3 +8,11 @@ services:
         ports: 
             - 8081:80
             - 8082:443
+        environment: 
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=https://+:443;http://+:80
+            - ASPNETCORE_Kestrel__Certificates__Default__Password=CERT@13
+            - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+        volumes:
+            - ./certificate/https:/https/
+    
