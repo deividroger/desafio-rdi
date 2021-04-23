@@ -4,6 +4,7 @@ services:
     app:
         build: .
         container_name: desafio-rdi-container
+        command: "dotnet run"
         ports: 
-            - 8081: 80
-            - 8082: 443
+            - 8081:80
+            - 8082:443

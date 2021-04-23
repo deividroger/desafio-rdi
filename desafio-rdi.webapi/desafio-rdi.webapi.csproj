@@ -7,8 +7,8 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\projetos\desafio-RDI\desafio-rdi\desafio-rdi.webapi\desafio-rdi.webapi.xml</DocumentationFile>
+  <PropertyGroup >
+    <DocumentationFile>desafio-rdi.webapi/desafio-rdi.webapi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +26,11 @@
     <ProjectReference Include="..\desafio-rdi.cross-cutting\desafio-rdi.cross-cutting.csproj" />
     <ProjectReference Include="..\desafio-rdi.domain\desafio-rdi.domain.csproj" />
   </ItemGroup>
-
+  
+  <ItemGroup>
+    <Content Include="desafio-rdi.webapi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>

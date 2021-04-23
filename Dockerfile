@@ -8,12 +8,14 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["desafio-rdi.webapi/desafio-rdi.webapi.csproj", "desafio-rdi.webapi/"]
+
 RUN dotnet restore "desafio-rdi.webapi/desafio-rdi.webapi.csproj"
 COPY . .
 WORKDIR "/src/desafio-rdi.webapi"
 
-RUN dotnet build "desafio-rdi.webapi.csproj" -c Release -o /app/build
+
 RUN  dotnet test
+RUN dotnet build "desafio-rdi.webapi.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "desafio-rdi.webapi.csproj" -c Release -o /app/publish
