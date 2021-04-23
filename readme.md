@@ -1,16 +1,15 @@
 ## **Hello!**
 
-**Some important information:
-**
+**SOME IMPORTANT INFORMATION:**
 
 This application was configured to run on ports 8081 and 8082. I put a self-signed certificate inside the project because that could happen when you'll run a message at your browser show up saying 'this is not a trusted website'.
 
 if you feel bothered with this, just remove (or comment) the  variables of docker-compose bellow:
 
-ASPNETCORE_Kestrel__Certificates__Default__Password
-ASPNETCORE_Kestrel__Certificates__Default__Path
+- ASPNETCORE_Kestrel__Certificates__Default__Password
+- ASPNETCORE_Kestrel__Certificates__Default__Path
 
-Doing this the app will run without a certificate.
+DOING THIS THE APP WILL RUN WITHOUT A CERTIFICATE.
 
 I installed the swagger package to help me to document the API. Then, you can access by:
 
@@ -24,9 +23,8 @@ To run this project, open your preferred terminal and run:
 
 ```shell
 docker-compose up
-
 ```
-This app was build with
+### This app was build with
 
 -  .net core 3.1
 -  xunit
@@ -40,3 +38,5 @@ This app was build with
 Enjoy.
 
 Thank you so much
+
+
